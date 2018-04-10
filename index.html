@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alectro Mats</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/slick.js"></script>
+    <link rel="stylesheet" href="static/css/slick.css">
+    <script src="static/js/smooth.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="#header"><span><i class="fab fa-asymmetrik"></i></span></a>
+            <a href="#items"><li>Товары</li></a>
+            <a href="#about"><li>О нас</li></a>
+            <a href="#callback"><li>Обратная связь</li></a>
+            <a href="#contacts"><li>Контакты</li></a>
+        </ul>
+    </nav>
+    <header id="header">
+        <div class="shadow">
+            <div>
+                <h1>Alectro Mats</h1>
+                <p>Качественно <span>/</span> Выгодно <span>/</span> С гарантией</p>
+                <p>Ваш будущий поставщик электроматериалов</p>
+                <a href="#items">Перейти к товарам</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="items">
+            <div class="container">
+                <h2>Асортимент наших товаров</h2>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <div class="slider">
+                    <div><img src="static/img/item-1.jpg"></div>
+                    <div><img src="static/img/item-2.jpg"></div>
+                    <div><img src="static/img/item-3.jpg"></div>
+                </div>
+            </div>
+        </section>
+        <section id="callback">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+    <footer id="contacts">
+        <span>КОНТАКТЫ</span>
+    </footer>
+    <script>
+        $(document).ready(function(){
+            $('.slider').slick({
+                autoplay: true,
+                autoplaySpeed: 4500,
+                nextArrow: '<a><i class="fas fa-arrow-alt-circle-right"></i></a>',
+                prevArrow: '<a><i class="fas fa-arrow-alt-circle-left"></i></a>'
+            });
+        });
+
+        $("#contacts").toggle(
+            function(){
+                $("#contacts span").html('ЗАКРЫТЬ');
+                $('#contacts').css({'height':'600px','margin-top':'-600px'})
+            },
+            function(){
+                $("#contacts span").html('КОНТАКТЫ');
+                $('#contacts').css({'height':'50px','margin-top':'0px'})
+            }
+        ); 
+    </script>
+</body>
+</html>
