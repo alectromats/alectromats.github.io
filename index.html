@@ -40,6 +40,7 @@
         </section>
         <section id="about">
             <div class="container">
+                <h2>О нашей компании</h2>
                 <div class="slider">
                     <div><img src="static/img/item-1.jpg"></div>
                     <div><img src="static/img/item-2.jpg"></div>
@@ -49,12 +50,13 @@
         </section>
         <section id="callback">
             <div class="container">
+                <h2>Закажите обратный звонок</h2>
 
             </div>
         </section>
     </main>
     <footer id="contacts">
-        <span>КОНТАКТЫ</span>
+        <span class="footer-span">КОНТАКТЫ</span><span><i class="fas fa-hand-pointer"></i></span>
     </footer>
     <script>
         $(document).ready(function(){
@@ -68,12 +70,14 @@
 
         $("#contacts").toggle(
             function(){
-                $("#contacts span").html('ЗАКРЫТЬ');
-                $('#contacts').css({'height':'600px','margin-top':'-600px'})
+                $("#contacts .footer-span").html('ЗАКРЫТЬ');
+                $("#contacts span").last().css({'display':'none'})
+                $('#contacts').css({'height':'696px','margin-top':'-648px'})
             },
             function(){
-                $("#contacts span").html('КОНТАКТЫ');
-                $('#contacts').css({'height':'50px','margin-top':'0px'})
+                $("#contacts .footer-span").html('КОНТАКТЫ');
+                $("#contacts span").last().css({'display':'inline-block'})
+                $('#contacts').css({'height':'48px','margin-top':'0px'})
             }
         ); 
     </script>
