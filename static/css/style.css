@@ -36,7 +36,17 @@ header .shadow div h1{
     color: #fff;
     font-weight: bold;
     float: left;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+}
+
+header .shadow div h1:after{
+    content: "";
+    border-bottom: 4px solid #5C6BC0;
+    position: absolute;
+    z-index: 99;
+    bottom: 194px;
+    width: 141px;
+    left: -1px;
 }
 
 header .shadow div p{
@@ -45,7 +55,6 @@ header .shadow div p{
     color: #fff;
     float: left;
     margin: 0px;
-    margin-bottom: 10px;
     margin-top: 10px;
 }
 
@@ -54,9 +63,9 @@ header .shadow div p span{
 }
 
 header .shadow div a{
-    margin-top: 40px;
+    margin-top: 30px;
     display: block;
-    background-color: #5C6BC0;
+    background-color: rgb(63, 85, 181);
     height: 38px;
     padding: 0 36px;
     border-radius: 8px;
@@ -69,8 +78,23 @@ header .shadow div a{
     font-weight: 500;
     padding-top: 10px;
     float: left;
-
 }
+
+.blink {
+    animation: fader 2.5s infinite;
+}
+
+@keyframes fader {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 .shadow{
     background-color: rgba(33, 33, 33, 0.83);
