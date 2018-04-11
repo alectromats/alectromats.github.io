@@ -100,7 +100,7 @@ header .shadow div a{
 .shadow{
     background-color: rgba(33, 33, 33, 0.83);
     width: 100%;
-    height: -webkit-fill-available;
+    height: inherit;
 }
 
 .container{
@@ -109,12 +109,13 @@ header .shadow div a{
     display: block;
     padding: 120px;
     padding-top: 100px;
-    height: -webkit-fill-available;
+    padding-bottom: 60px;
+    height: auto;
 }
 
 .container h2{
     text-align: center;
-    color: #333;
+    color: rgba(51, 51, 51, 0.9);
     font-size: 30px;
     line-height: 40px;
     font-weight: bold;
@@ -146,6 +147,7 @@ nav svg{
 
 nav ul{
     width: fit-content;
+    width: -moz-fit-content;
     margin: 0 auto;
     padding-left: 0px;
 }
@@ -159,7 +161,7 @@ nav ul a{
     text-transform: uppercase;
     font-size: 16px;
     line-height: 78px;
-    color: #333333;
+    color: rgba(51, 51, 51, 0.9);
     font-weight: 500;
     text-decoration: none;
     outline: none;
@@ -219,7 +221,7 @@ nav ul a:not(:first-child):hover{
 }
 
 footer{
-    background-color: rgba(63, 83, 181, 0.8);
+    background-color: #5C6BC0;
     text-align: center;
     position: absolute;
     z-index: 2;
@@ -259,4 +261,198 @@ footer span:not(:first-child){
         transform: scale(1);
         transform: rotate(-15deg);
     }
+}
+
+.grid-container{
+    margin-top: 90px;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    grid-template-rows: repeat(3, 690px);
+    grid-gap: 2rem;
+    grid-column-gap: 3rem;
+}
+
+.grid-container .item{
+    transition: .5s;
+}
+
+.grid-container .item:hover{
+    transition: .5s;
+    box-shadow: 0px 0px 16px 6px rgba(158, 158, 158, 0.6);
+    cursor: pointer;
+}
+
+.inner-container{
+    padding: 40px;
+    padding-top: 10px;
+}
+
+.inner-container h3{
+    color: rgba(51, 51, 51, 0.9);
+}
+
+.inner-container p:before{
+    content: "";
+    border-top: 3px solid rgba(63, 83, 181, 0.8);
+    width: 70px;
+    position: absolute;
+    margin-left: 1px;
+    display: block;
+    margin-top: -25px;
+}
+
+.inner-container p{
+    padding-top: 30px;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: normal;
+    color: rgba(51, 51, 51, 0.8);
+}
+
+.item{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: bold;
+}
+
+.item img{
+    width: 240px;
+    margin: 0 auto;
+    display: block;
+    padding-top: 30px;
+}
+
+.price{
+    font-size: 28px;
+    color: rgba(63, 83, 181, 0.9);
+    padding-top: 16px;
+    display: block;
+}
+
+.company-accent{
+    color: rgba(63, 83, 181, 0.9);
+    font-weight: bold;
+}
+
+.description{
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    color: rgba(51, 51, 51, 0.75);
+    font-size: 19px;
+    max-width: 805px;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.last{
+    padding-top: 0px;
+    padding-bottom: 90px;
+}
+
+.slider-view{
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 370px;
+    background-color: rgba(51, 51, 51, 0.85);
+    height: 542px;
+}
+
+.slider-view p{
+    font-size: 32px;
+    color: white;
+    display: block;
+    margin: 182px auto;
+    margin-left: 30px;
+    max-width: 320px;
+    font-weight: bold;
+    line-height: 58px;
+}
+
+.slider-view p span{
+    padding-right: 15px;
+    color: #7986CB;
+}
+
+form{
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+
+input{
+    font-family: 'Roboto', sans-serif;
+    width: 402px;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    color: rgba(51, 51, 51, 0.8);
+}
+
+::-webkit-input-placeholder{
+    color: rgba(51, 51, 51, 0.4);
+}
+
+textarea{
+    margin-top: 10px;
+    width: 402px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    resize: none;
+    color: rgba(51, 51, 51, 0.8);
+}
+
+button{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(92, 107, 192, 0.8);
+    color: #f0f0f0;
+    height: 40px;
+    border: 0;
+    margin: 0;
+    width: 422px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+button:hover{
+    box-shadow: 0px 0px 14px 5px rgba(158, 158, 158, 0.6);
+    transition: .5s;
+    background-color: rgba(57, 74, 171, 0.8);
+}
+
+input:focus{
+    outline: none;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+button:focus{
+    outline: none;
+}
+
+iframe{
+    position: absolute;
+    margin-top: 105px;
+    display: block;
+    right: 0;
+    margin-right: 12%;
+}
+
+footer h2{
+    margin-top: 184px;
+    margin-left: 12%;
+    position: absolute;
+    color: #f0f0f0;
+    text-align: left;
+    display: block;
+    max-width: 602px;
 }
